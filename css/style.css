@@ -56,6 +56,16 @@ header .logo h2 {
     
 }
 
+header .menu-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #777777;
+    cursor: pointer;
+    outline: none;
+    vertical-align: center;
+}
+
 main section.banner {
     padding: 50px 0;
     /* Não extrapolar limite da tela (scroll bar) */
@@ -185,6 +195,43 @@ main section.styles .container article h3 {
     border-radius: 15px;
 }
 
+main section.contato h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+main section.contato form {
+    width: 500px;
+    max-width: 100%;
+    margin: 40px auto;
+}
+
+main section.contato form input,
+main section.contato form textarea {
+    width: 100%;
+    padding: 5px;
+    resize: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+main section.contato form button {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #DC9730;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-family: 'Ropa Sans', sans-serif;
+    cursor: pointer;
+}
+
+main section.contato form button:hover {
+    background-color: #51D275;
+}
+
 footer .container {
     background-color: black;
     display: flex;
@@ -207,13 +254,30 @@ footer .container .info {
     color: #FFFFFF;
     font-size: 20px;
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+    left: 120px;
 }
 
 footer .container .info a:any-link {
     color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer ul.redes-sociais {
+    text-align: justify;
+}
+    
+footer ul.redes-sociais {
+    list-style: none;
+}
+    
+footer ul.redes-sociais li {
+    display: inline-block;
+}
+    
+footer ul.redes-sociais li a img {
+    width: 30px;
+    margin: 10px;
 }
 
 @media (max-width: 900px) {
