@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    width: 1000px;
+    width: 1200px;
     /* Comando para manter o máximo de tamanho descrito acima, ou manter o tamanho em tela menor */
     max-width: 100%;
     /* Margem: 0 de espaçamento pra cima e baixo; auto para os lados */
@@ -25,12 +25,14 @@ body {
 header {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     /* margin-bottom: 30px; */
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    /* Posicionamento do elemento */
     top: 0;
     left: 0;
-    z-index: 9;
-    width: 100%;
-    background-color: #FFFFFF;
+    /* Projeta o elemento a frente dos outros */
+    z-index: 3;
 }
 
 header .container {
@@ -39,6 +41,12 @@ header .container {
     justify-content: space-between;
     /* Alinhamento vertical */
     align-items: center;
+}
+
+h1 {
+    margin-top: 80px;   
+    display: flex;
+    justify-content: center;
 }
 
 header .logo h1 {
@@ -52,7 +60,7 @@ header .logo h2 {
     display: inline-block;
     color: #777;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 200;
     
 }
 
@@ -111,6 +119,7 @@ main section.banner .container .setas a {
 main section.projects .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 main section.projects .container article {
@@ -127,7 +136,6 @@ main section.projects .container article .thumb {
     height: 250px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 }
 
 main section.projects .container article .info {
@@ -145,7 +153,8 @@ main section.projects .container article .info .price {
     margin: 0;
 }
 
-main section.projects .container article .info .tag {
+main section.projects .container article .info .tag-new,
+main section.projects .container article .info .tag-sale {
     padding: 5px 10px;
     background-color: gray;
     color: #fff;
@@ -154,11 +163,11 @@ main section.projects .container article .info .tag {
     font-size: 25px;
 }
 
-main section.projects .container article .info .tag.tag-green {
+main section.projects .container article .info .tag-new {
     background-color: #51D275;
 }
 
-main section.projects .container article .info .tag.tag-orange {
+main section.projects .container article .info .tag-sale {
     background-color: #DC9730;
 }
 
@@ -191,7 +200,8 @@ main section.styles .container article h3 {
     align-items: center;
     margin: 0;
     font-size: 30px;
-    color: #FFFFFF;
+    font-weight: 400;
+    color: #fff;
     border-radius: 15px;
 }
 
@@ -200,14 +210,15 @@ main section.contato h2 {
     font-size: 30px;
 }
 
-main section.contato form {
+form {
     width: 500px;
     max-width: 100%;
     margin: 40px auto;
 }
 
-main section.contato form input,
-main section.contato form textarea {
+form input:not([type='radio']):not([type='checkbox']),
+form textarea,
+form select {
     width: 100%;
     padding: 5px;
     resize: none;
@@ -215,7 +226,11 @@ main section.contato form textarea {
     margin-bottom: 15px;
 }
 
-main section.contato form button {
+fieldset {
+    margin: 10px 0;
+}
+
+form button {
     width: 100%;
     padding: 5px;
     font-size: 16px;
@@ -228,21 +243,22 @@ main section.contato form button {
     cursor: pointer;
 }
 
-main section.contato form button:hover {
+form button:hover {
     background-color: #51D275;
 }
 
 footer .container {
-    background-color: black;
+    background-color: #333333;
+    color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 70px;
     padding: 40px;
 }
 
-footer .container .iframe {
+footer iframe {
     width: 400px;
     height: 350px;
     max-width: 100%;
@@ -254,11 +270,10 @@ footer .container .info {
     color: #FFFFFF;
     font-size: 20px;
     width: 50%;
-
     left: 120px;
 }
 
-footer .container .info a:any-link {
+footer a:any-link {
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -278,6 +293,38 @@ footer ul.redes-sociais li {
 footer ul.redes-sociais li a img {
     width: 30px;
     margin: 10px;
+}
+
+.main-form {
+    padding: 100px 0;
+}
+
+.interesse-form {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+}
+
+/* Estilo de botão para <button> ou <a> */
+.btn-primary {
+    background-color: #DC9730;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 900px) {
