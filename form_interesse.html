@@ -18,7 +18,7 @@
             <button class="menu-toggle">☰</button>
         </div>
     </header>
-    <main class="interesse-form">
+    <main class="main-form">
         <div class="container">
             <h1>Deseja um loft?</h1>
             <form action="form_sucesso.html" class="form">
@@ -31,23 +31,22 @@
                 
                 <fieldset>
                     <legend>Contrato:</legend>
-                    <input type="checkbox" name="contract" id="contract_al" value="Aluguel">
-                    <label for="contract_al">Aluguel</label>
-                    <input type="checkbox" name="contract" id="contract_comp" value="Compra">
-                    <label for="contract_comp">Compra</label>
+                    <input type="checkbox" name="contract" id="aluguel" value="Aluguel">
+                    <label for="aluguel">Aluguel</label>
+                    <input type="checkbox" name="contract" id="compra" value="Compra">
+                    <label for="compra">Compra</label>
                 </fieldset>
-                
                 <fieldset>
                     <legend>Pet friendly?</legend>
-                    <input type="radio" name="pet" id="petfriendly_sim" value="sim">
-                    <label for="petfriendly_sim">Sim</label>
-                    <input type="radio" name="pet" id="petfriendly_nao" value="não">
-                    <label for="petfriendly_nao">Não</label>
+                    <input type="radio" name="pet" id="sim" value="s">
+                    <label for="sim">Sim</label>
+                    <input type="radio" name="pet" id="nao" value="n">
+                    <label for="nao">Não</label>
                 </fieldset>
 
                 <label for="regiao">Região</label>
                 <select name="regiao" id="regiao">
-                    <option value="selecione" selected disabled>Selecione</option>
+                    <option value="" selected>Selecione</option>
                     <option value="centro">Centro</option>
                     <option value="sul">Sul</option>
                     <option value="norte">Norte</option>
@@ -56,7 +55,7 @@
                 </select>
                 
                 <label for="observacoes">Observações</label>
-                <textarea name="observacoes" id="observacoes" cols="5" rows="10"></textarea>
+                <textarea name="observacoes" id="observacoes"></textarea>
             </form>
             <div class="btn">
                 <button type="reset" class="btn-primary">Limpar</button>

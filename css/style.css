@@ -43,12 +43,6 @@ header .container {
     align-items: center;
 }
 
-h1 {
-    margin-top: 80px;   
-    display: flex;
-    justify-content: center;
-}
-
 header .logo h1 {
     display: inline-block;
     color: #777;
@@ -226,8 +220,10 @@ form select {
     margin-bottom: 15px;
 }
 
-fieldset {
+form fieldset {
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
 form button {
@@ -297,6 +293,7 @@ footer ul.redes-sociais li a img {
 
 .main-form {
     padding: 100px 0;
+    text-align: center;
 }
 
 .interesse-form {
